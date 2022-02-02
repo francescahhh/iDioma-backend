@@ -1,0 +1,2 @@
+class NoteCategory < ApplicationRecord
+end
