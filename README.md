@@ -1,4 +1,4 @@
-# [insert name of app here] Backend README
+# iDioma Backend README
 
 ## Models and Relationships
 

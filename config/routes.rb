@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :note_categories, only: [:index, :show, :destroy]
-  resources :word_categories, only: [:index, :show, :destroy]
-  resources :words, only: [:index, :show, :destroy]
-  resources :notes, only: [:index, :show, :destroy]
-  
+  resources :note_categories, only: [:index, :show, :create, :destroy]
+  resources :word_categories, only: [:index, :show, :create, :destroy]
+  resources :words, only: [:index, :show, :create, :update, :destroy]
+  resources :notes, only: [:index, :show, :create, :update, :destroy]
+
   namespace :api do 
     namespace :v1 do
       resources :users, only: [:create]

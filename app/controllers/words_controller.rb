@@ -9,22 +9,36 @@ end
 
 # finds one word by id 
 def show 
-    render json: find_word, status: :ok
+    render json: find_word_params, status: :ok
 end
 
+# creates a new word
+def create
+    word = Word.create!(create_params)
+    render json: word, status: :created
+end
+
+# updates a word
 def update 
+    word = Word.find_by(id: params[:id])
+    word.update(create_params)
+    render json: wordd
 end
 
 # deletes one word
 def destroy
-    word = find_word
+    word = find_word_params
     word.destroy
     head :no_content
 end 
 
 private 
 
-def find_word
+def create_params
+    params.permit(:word, :definition, :source)
+end
+
+def find_word_params
     Word.find(params[:id])
 end
 

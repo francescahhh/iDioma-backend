@@ -9,22 +9,36 @@ end
 
 # finds one note by id 
 def show 
-    render json: find_note, status: :ok
+    render json: find_note_params, status: :ok
 end
 
+# creates a new note
+def create
+    note = Note.create!(create_params)
+    render json: note, status: :created
+end
+
+# updates a note
 def update 
+    note = Note.find_by(id: params[:id])
+    note.update(create_params)
+    render json: note
 end
 
 # deletes one note
 def destroy
-    note = find_note
+    note = find_note_params
     note.destroy
     head :no_content
 end 
 
 private 
 
-def find_note
+def create_params
+    params.permit(:content)
+end
+
+def find_note_params
     Note.find(params[:id])
 end
 
