@@ -6,3 +6,5 @@ class CreateNoteCategories < ActiveRecord::Migration[7.0]
     end
   end
 end
+
+# Next step: build out option to assign notes to category
