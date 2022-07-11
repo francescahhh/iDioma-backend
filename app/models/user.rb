@@ -3,7 +3,7 @@ class User < ApplicationRecord
     validates :username, uniqueness: { case_sensitive: false }
 
     def authenticate(password)
-        if BCrypt::Password.new(self.password_digest) == password
+        if BCrypt::Password.new(self.password_digest) == password 
             self
         else
             false
