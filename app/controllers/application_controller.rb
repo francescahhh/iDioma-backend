@@ -2,9 +2,9 @@ class ApplicationController < ActionController::API
     # before_action :authorized 
 
     # # makes the token
-    # def encode_token(payload)
-    #     JWT.encode(payload, 'my_s3cr3t')
-    # end
+     def encode_token(payload)
+        JWT.encode(payload, 'my_s3cr3t')
+     end
 
     # def auth_header
     #     request.headers['Authorization']
