@@ -66,7 +66,7 @@ category_name: “animals”
 }
 ```
 There is also a DELETE endpoint for this table.
-```
+
 #### Next Steps:
 
 *Hook up word and note categories, make words and notes sortable on the frontend by categories. 
