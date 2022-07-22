@@ -66,3 +66,7 @@ category_name: “animals”
 }
 ```
 There is also a DELETE endpoint for this table.
+```
+Next Steps:
+*Hook up word and note categories, make words and notes sortable on the frontend by categories. 
+*Add languages table to allow users to store notes and words for multiple different languages (ex. user has many languages, language has many words and many notes).
